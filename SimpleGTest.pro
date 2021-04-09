@@ -1,7 +1,8 @@
 TEMPLATE = subdirs
 
-SUBDIRS += \
+SUBDIRS += \    
     ApplicationLib \
+    Application \
     GoogleTest \
     Tests
 
