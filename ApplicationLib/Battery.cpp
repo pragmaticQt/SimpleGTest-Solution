@@ -4,11 +4,11 @@ Battery::Battery(IBatteryCell &cellOne, IBatteryCell &cellTwo) :
     m_cellOne(cellOne),
     m_cellTwo(cellTwo)
 {
-    connect(&m_cellOne, SIGNAL(chargePercentChanged()),
-            this, SIGNAL(chargePercentChanged()));
+    connect(&m_cellOne, &IBatteryCell::chargePercentChanged,
+            this, &IBattery::chargePercentChanged);
 
-    connect(&m_cellTwo, SIGNAL(chargePercentChanged()),
-            this, SIGNAL(chargePercentChanged()));
+    connect(&m_cellTwo, &IBatteryCell::chargePercentChanged,
+            this, &IBattery::chargePercentChanged);
 }
 
 double Battery::chargePercent() const

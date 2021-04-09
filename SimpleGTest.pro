@@ -4,3 +4,5 @@ SUBDIRS += \
     ApplicationLib \
     GoogleTest \
     Tests
+
+CONFIG += ordered
